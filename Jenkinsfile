@@ -27,4 +27,11 @@ pipeline {
             }
         }
     }
+    
+    post {
+    success {
+        dingding accessToken: '307639615ceb00d61fdffc34e61ad488b33b16859fde596a5b42714e61f2ce30',
+                 jsonFilePath:"dingding.json"
+    }
+}
 }
