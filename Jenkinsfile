@@ -26,10 +26,8 @@ pipeline {
                 sh './jenkins/scripts/kill.sh' 
             }
         }
-    }
-    
+    }    
     post {
-      
          success {
                steps {
                 def url = "https://oapi.dingtalk.com/robot/send?access_token=307639615ceb00d61fdffc34e61ad488b33b16859fde596a5b42714e61f2ce30"
@@ -41,13 +39,8 @@ pipeline {
                          }
                      }
                     """
-                   
-               
               httpRequest acceptType: 'APPLICATION_JSON', contentType: 'APPLICATION_JSON', httpMode: 'POST', requestBody: body, url: url
-
             }
-    
-
         
         }
     }
